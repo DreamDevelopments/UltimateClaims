@@ -56,14 +56,14 @@ public class CommandClaim extends AbstractCommand {
         if (this.plugin.getClaimManager().hasClaim(player)) {
             claim = this.plugin.getClaimManager().getClaim(player);
 
-            if (!claim.getPowerCell().hasLocation()) {
+            ClaimedRegion region = claim.getPotentialRegion(chunk);
+
+            if (region != null && !region.getPowerCell().hasLocation()) {
                 this.plugin.getLocale().getMessage("command.claim.nocell").sendPrefixedMessage(player);
                 return ReturnType.FAILURE;
             }
 
-            ClaimedRegion region = claim.getPotentialRegion(chunk);
-
-            if (Settings.CHUNKS_MUST_TOUCH.getBoolean() && region == null) {
+            if (region == null && Settings.CHUNKS_MUST_TOUCH.getBoolean() && !Settings.ALLOW_MULTIPLE_POWERCELLS.getBoolean()) {
                 this.plugin.getLocale().getMessage("command.claim.nottouching").sendPrefixedMessage(player);
                 return ReturnType.FAILURE;
             }
@@ -102,8 +102,8 @@ public class CommandClaim extends AbstractCommand {
                 this.plugin.getDynmapManager().refresh();
             }
 
-            if (Settings.POWERCELL_HOLOGRAMS.getBoolean()) {
-                claim.getPowerCell().updateHologram();
+            if (Settings.POWERCELL_HOLOGRAMS.getBoolean() && claim.getClaimedRegion(chunk).getPowerCell() != null) {
+                claim.getClaimedRegion(chunk).getPowerCell().updateHologram();
             }
         } else {
             claim = new ClaimBuilder()
