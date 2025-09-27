@@ -112,6 +112,10 @@ public class TrackerTask extends BukkitRunnable implements Listener {
     }
 
     public void toggleFlyOff(Player player) {
+        if (player.hasPermission("ultimateclaims.bypass.fly")) {
+            return;
+        }
+
         TrackedPlayer trackedPlayer = this.trackedPlayers.get(player.getUniqueId());
 
         if (trackedPlayer == null) {
