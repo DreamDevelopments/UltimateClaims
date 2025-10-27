@@ -98,6 +98,6 @@ public class CommandAddMember extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Add a player to access your claim.";
+        return plugin.getLocale().getMessage("commands.addmember").toText();
     }
 }

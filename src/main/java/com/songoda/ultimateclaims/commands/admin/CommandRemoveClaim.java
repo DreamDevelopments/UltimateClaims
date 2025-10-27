@@ -70,6 +70,6 @@ public class CommandRemoveClaim extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Remove a claim you're standing in.";
+        return plugin.getLocale().getMessage("commands.admin.removeclaim").toText();
     }
 }

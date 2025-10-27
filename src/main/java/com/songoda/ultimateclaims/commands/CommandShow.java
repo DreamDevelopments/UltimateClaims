@@ -54,6 +54,6 @@ public class CommandShow extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Visualize claims around you";
+        return plugin.getLocale().getMessage("commands.show").toText();
     }
 }

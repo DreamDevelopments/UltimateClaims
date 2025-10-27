@@ -87,6 +87,6 @@ public class CommandHome extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Go to a claims home.";
+        return plugin.getLocale().getMessage("commands.home").toText();
     }
 }

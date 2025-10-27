@@ -60,6 +60,6 @@ public class CommandSetHome extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Set the home for your claim.";
+        return plugin.getLocale().getMessage("commands.sethome").toText();
     }
 }

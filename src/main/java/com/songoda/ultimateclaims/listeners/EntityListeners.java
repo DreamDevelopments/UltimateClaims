@@ -238,9 +238,10 @@ public class EntityListeners implements Listener {
         if (claim != null) {
             Entity source = event.getDamager();
 
-            // If the damage is from an explosion, cancel it inside claims
-            if (event.getCause() == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION
-                    || event.getCause() == EntityDamageEvent.DamageCause.BLOCK_EXPLOSION) {
+            // If the damage is from an explosion, check TNT setting
+            if ((event.getCause() == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION
+                    || event.getCause() == EntityDamageEvent.DamageCause.BLOCK_EXPLOSION)
+                    && !claim.getClaimSettings().isEnabled(ClaimSetting.TNT)) {
                 event.setCancelled(true);
                 return;
             }

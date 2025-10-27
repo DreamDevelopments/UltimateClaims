@@ -96,6 +96,6 @@ public class CommandUnBan extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Unban a member from your claim.";
+        return plugin.getLocale().getMessage("commands.unban").toText();
     }
 }

@@ -106,6 +106,6 @@ public class CommandKick extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Kick a member from your claim.";
+        return plugin.getLocale().getMessage("commands.kick").toText();
     }
 }

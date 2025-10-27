@@ -40,6 +40,6 @@ public class CommandRecipe extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "View the recipe for a powercell.";
+        return plugin.getLocale().getMessage("commands.recipe").toText();
     }
 }

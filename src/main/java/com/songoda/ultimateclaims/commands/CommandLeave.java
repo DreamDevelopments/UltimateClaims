@@ -111,6 +111,6 @@ public class CommandLeave extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Leave a claim that you are a member of.";
+        return plugin.getLocale().getMessage("commands.leave").toText();
     }
 }

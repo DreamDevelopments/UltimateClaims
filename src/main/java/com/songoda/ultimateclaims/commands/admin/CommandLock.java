@@ -68,6 +68,6 @@ public class CommandLock extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Lock or unlock the claim you are standing in.";
+        return plugin.getLocale().getMessage("commands.admin.lock").toText();
     }
 }

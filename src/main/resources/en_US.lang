@@ -101,6 +101,34 @@ command:
     start: '&7Claim visualizer &2enabled.'
     stop: '&7Claim visualizer &cdisabled.'
 
+# Command Descriptions
+
+commands:
+  accept: 'Accept the latest claim invitation.'
+  addmember: 'Add a player to access your claim.'
+  ban: 'Ban a member from your claim.'
+  claim: 'Claim the land you are currently standing in for your claim.'
+  dissolve: 'Dissolve your claim.'
+  home: 'Go to a claims home.'
+  invite: 'Invite a player to join your claim.'
+  kick: 'Kick a member from your claim.'
+  leave: 'Leave a claim that you are a member of.'
+  lock: 'Lock or unlock your claim.'
+  name: 'Set the display name for your claim.'
+  recipe: 'View the recipe for a powercell.'
+  reload: 'Reload the Configuration and Language files.'
+  sethome: 'Set the home for your claim.'
+  setspawn: 'Set the spawn point for varies use such as ejecting and banning.'
+  settings: 'Edit the UltimateClaims Settings.'
+  show: 'Visualize claims around you'
+  unban: 'Unban a member from your claim.'
+  unclaim: 'Unclaim land from your claim.'
+  admin:
+    lock: 'Lock or unlock the claim you are standing in.'
+    name: 'Set the display name for the claim you are standing in.'
+    removeclaim: 'Remove a claim you''re standing in.'
+    transferownership: 'Transfer the claim your are standing in to another player.'
+
 # Interface Messages
 
 interface:

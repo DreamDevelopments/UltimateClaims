@@ -87,6 +87,6 @@ public class CommandAccept extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Accept the latest claim invitation.";
+        return plugin.getLocale().getMessage("commands.accept").toText();
     }
 }

@@ -72,6 +72,6 @@ public class CommandTransferOwnership extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Transfer the claim your are standing in to another player.";
+        return plugin.getLocale().getMessage("commands.admin.transferownership").toText();
     }
 }

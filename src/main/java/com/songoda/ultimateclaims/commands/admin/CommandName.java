@@ -63,6 +63,6 @@ public class CommandName extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Set the display name for the claim you are standing in.";
+        return plugin.getLocale().getMessage("commands.admin.name").toText();
     }
 }

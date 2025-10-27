@@ -188,6 +188,6 @@ public class CommandClaim extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Claim the land you are currently standing in for your claim.";
+        return plugin.getLocale().getMessage("commands.claim").toText();
     }
 }

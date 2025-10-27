@@ -77,6 +77,6 @@ public class CommandName extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Set the display name for your claim.";
+        return plugin.getLocale().getMessage("commands.name").toText();
     }
 }

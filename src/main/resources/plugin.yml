@@ -19,6 +19,7 @@ softdepend:
   - PlaceholderAPI
   - PlayerPoints
   - Slimefun
+  - KariEconomy
   - Vault
 
 author: Craftaro

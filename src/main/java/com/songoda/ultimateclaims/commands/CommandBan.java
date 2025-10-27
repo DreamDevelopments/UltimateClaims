@@ -109,6 +109,6 @@ public class CommandBan extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Ban a member from your claim.";
+        return plugin.getLocale().getMessage("commands.ban").toText();
     }
 }

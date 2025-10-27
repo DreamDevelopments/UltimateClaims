@@ -92,6 +92,6 @@ public class CommandInvite extends AbstractCommand {
 
     @Override
     public String getDescription() {
-        return "Invite a player to join your claim.";
+        return plugin.getLocale().getMessage("commands.invite").toText();
     }
 }
