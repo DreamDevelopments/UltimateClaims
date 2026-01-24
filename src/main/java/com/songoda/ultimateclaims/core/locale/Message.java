@@ -56,7 +56,7 @@ public class Message {
      * @param sender command sender to send the message to
      */
     public void sendMessage(CommandSender sender) {
-        AdventureUtils.sendMessage(SongodaCore.getHijackedPlugin(), this.message, sender);
+        AdventureUtils.sendMessage(this.message, (Player)sender);
     }
 
     /**
@@ -66,17 +66,18 @@ public class Message {
      */
     public void sendTitle(CommandSender sender) {
         if (sender instanceof Player) {
+            Player player = (Player)  sender;
             if (ServerVersion.isServerVersionAtLeast(ServerVersion.V1_11)) {
-                AdventureUtils.sendTitle(SongodaCore.getHijackedPlugin(), AdventureUtils.createTitle(Component.empty(), getMessage(), 10, 30, 10), sender);
+                AdventureUtils.sendTitle(AdventureUtils.createTitle(Component.empty(), getMessage(), 10, 30, 10), player);
                 return;
             }
 
-            AdventureUtils.sendTitle(SongodaCore.getHijackedPlugin(), AdventureUtils.createTitle(Component.empty(), getMessage()), sender);
+            AdventureUtils.sendTitle(AdventureUtils.createTitle(Component.empty(), getMessage()), player);
 
             return;
         }
 
-        AdventureUtils.sendMessage(SongodaCore.getHijackedPlugin(), this.message, sender);
+        AdventureUtils.sendMessage(this.message, sender);
     }
 
     /**
@@ -86,7 +87,7 @@ public class Message {
      */
     public void sendActionBar(CommandSender sender) {
         if (!(sender instanceof Player)) {
-            AdventureUtils.sendMessage(SongodaCore.getHijackedPlugin(), this.message, sender);
+            AdventureUtils.sendMessage(this.message, sender);
             return;
         }
 
@@ -95,7 +96,7 @@ public class Message {
             return;
         }
 
-        AdventureUtils.sendActionBar(SongodaCore.getHijackedPlugin(), getMessage(), sender);
+        AdventureUtils.sendActionBar(getMessage(), (Player)sender);
     }
 
     /**
@@ -105,7 +106,7 @@ public class Message {
      * @param sender command sender to send the message to
      */
     public void sendPrefixedMessage(CommandSender sender) {
-        AdventureUtils.sendMessage(SongodaCore.getHijackedPlugin(), this.prefix.append(this.message), sender);
+        AdventureUtils.sendMessage(this.prefix.append(this.message), sender);
     }
 
     /**
