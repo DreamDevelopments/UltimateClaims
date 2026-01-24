@@ -147,6 +147,7 @@ interface:
     memberslore: '&7View your claims members.'
     settingstitle: '&6&lSettings'
     settingslore: '&7Change your claims settings.'
+    claimtitle: 'Your Claim'
   members:
     title: Members
     statslore: '&7Total Members: &6%totalmembers%&7.|&7Max Members: &6%maxmembers%&7.|&7Members: &6%members%&7.'
